@@ -19,11 +19,38 @@ extension Task {
     @NSManaged public var title: String?
     @NSManaged public var typeValue: String?
     @NSManaged public var date: Date?
-    @NSManaged public var repeatValue: String?
+    @NSManaged public var replayValue: String?
     @NSManaged public var reminderValue: String?
     @NSManaged public var summary: String?
     @NSManaged public var petName: String?
     @NSManaged public var pet: Pet?
+    
+    var type: TaskType {
+        get {
+            return TaskType(rawValue: typeValue ?? "") ?? .none
+        }
+        set {
+            typeValue = newValue.rawValue
+        }
+    }
+    
+    var replay: Replay {
+        get {
+            return Replay(rawValue: replayValue ?? "") ?? .never
+        }
+        set {
+            replayValue = newValue.rawValue
+        }
+    }
+    
+    var reminder: Reminder {
+        get {
+            return Reminder(rawValue: reminderValue ?? "") ?? .none
+        }
+        set {
+            reminderValue = newValue.rawValue
+        }
+    }
 
 }
 

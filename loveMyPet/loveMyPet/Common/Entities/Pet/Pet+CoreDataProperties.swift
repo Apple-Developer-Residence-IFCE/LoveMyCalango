@@ -25,6 +25,7 @@ extension Pet {
     @NSManaged public var isNeutered: Bool
     @NSManaged public var birthDate: Date?
     @NSManaged public var weight: Double
+    @NSManaged public var task: NSSet?
     
     var breed: String {
         get {
@@ -53,6 +54,22 @@ extension Pet {
         }
     }
     
+}
+
+extension Pet {
+
+    @objc(addPetToTasksObject:)
+    @NSManaged public func addToPetToTasks(_ value: Task)
+
+    @objc(removePetToTasksObject:)
+    @NSManaged public func removeFromPetToTasks(_ value: Task)
+
+    @objc(addPetToTasks:)
+    @NSManaged public func addToPetToTasks(_ values: NSSet)
+
+    @objc(removePetToTasks:)
+    @NSManaged public func removeFromPetToTasks(_ values: NSSet)
+
 }
 
 extension Pet : Identifiable {

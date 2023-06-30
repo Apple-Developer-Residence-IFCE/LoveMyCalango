@@ -38,6 +38,11 @@
 		B109C1C82A42270E008585BE /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B109C1C72A42270E008585BE /* CoreDataManager.swift */; };
 		B1220F932A42DDEB00CFA3C5 /* BirthDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1220F922A42DDEB00CFA3C5 /* BirthDatePicker.swift */; };
 		B14689FC2A3922760070382B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14689FB2A3922760070382B /* Color.swift */; };
+		B1B069A42A4E34B2001AEEF3 /* Replay.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B069A32A4E34B2001AEEF3 /* Replay.swift */; };
+		B1B069A62A4E34CE001AEEF3 /* TaskType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B069A52A4E34CE001AEEF3 /* TaskType.swift */; };
+		B1B069A82A4E34DF001AEEF3 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B069A72A4E34DF001AEEF3 /* Reminder.swift */; };
+		B1B069C42A4E4B59001AEEF3 /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B069C02A4E4B59001AEEF3 /* Task+CoreDataClass.swift */; };
+		B1B069C52A4E4B59001AEEF3 /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B069C12A4E4B59001AEEF3 /* Task+CoreDataProperties.swift */; };
 		DF36E1C52A239BE900CEE0A9 /* GenderPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF36E1C42A239BE900CEE0A9 /* GenderPicker.swift */; };
 		DF36E1C72A239BF900CEE0A9 /* SpeciePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF36E1C62A239BF900CEE0A9 /* SpeciePicker.swift */; };
 		DF36E1C92A239C3600CEE0A9 /* BreedPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF36E1C82A239C3600CEE0A9 /* BreedPicker.swift */; };
@@ -111,6 +116,11 @@
 		B109C1C72A42270E008585BE /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		B1220F922A42DDEB00CFA3C5 /* BirthDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthDatePicker.swift; sourceTree = "<group>"; };
 		B14689FB2A3922760070382B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		B1B069A32A4E34B2001AEEF3 /* Replay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Replay.swift; sourceTree = "<group>"; };
+		B1B069A52A4E34CE001AEEF3 /* TaskType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskType.swift; sourceTree = "<group>"; };
+		B1B069A72A4E34DF001AEEF3 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		B1B069C02A4E4B59001AEEF3 /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataClass.swift"; path = "../../../../Task+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B1B069C12A4E4B59001AEEF3 /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DF36E1C42A239BE900CEE0A9 /* GenderPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderPicker.swift; sourceTree = "<group>"; };
 		DF36E1C62A239BF900CEE0A9 /* SpeciePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciePicker.swift; sourceTree = "<group>"; };
 		DF36E1C82A239C3600CEE0A9 /* BreedPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedPicker.swift; sourceTree = "<group>"; };
@@ -311,9 +321,13 @@
 			isa = PBXGroup;
 			children = (
 				41F894892A3153FA00C9AE02 /* Gender.swift */,
+				B1B069A32A4E34B2001AEEF3 /* Replay.swift */,
+				B1B069A52A4E34CE001AEEF3 /* TaskType.swift */,
+				B1B069A72A4E34DF001AEEF3 /* Reminder.swift */,
 				DF36E1D32A23A72A00CEE0A9 /* Neutered.swift */,
 				41F8948B2A37C43000C9AE02 /* Specie.swift */,
 				640189BF2A29543000813E20 /* NewPet.swift */,
+				B1B069B52A4E42BC001AEEF3 /* Task */,
 				B109C1C52A42269F008585BE /* Pet */,
 			);
 			path = Entities;
@@ -414,6 +428,15 @@
 				B109C1C72A42270E008585BE /* CoreDataManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		B1B069B52A4E42BC001AEEF3 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				B1B069C02A4E4B59001AEEF3 /* Task+CoreDataClass.swift */,
+				B1B069C12A4E4B59001AEEF3 /* Task+CoreDataProperties.swift */,
+			);
+			path = Task;
 			sourceTree = "<group>";
 		};
 		DF36E1C22A239BB300CEE0A9 /* FormView */ = {
@@ -624,6 +647,7 @@
 				41F8948A2A3153FA00C9AE02 /* Gender.swift in Sources */,
 				DF912F6F2A22DFF000F15799 /* FormView.swift in Sources */,
 				DF5C02402A22DBFD00E9898E /* EditPetView.swift in Sources */,
+				B1B069A42A4E34B2001AEEF3 /* Replay.swift in Sources */,
 				DF36E1C72A239BF900CEE0A9 /* SpeciePicker.swift in Sources */,
 				DF36E1CC2A239C6700CEE0A9 /* FormRowCell.swift in Sources */,
 				640189C22A296B0B00813E20 /* AlertMessage.swift in Sources */,
@@ -648,18 +672,22 @@
 				DF5C02422A22DC0E00E9898E /* EditPetViewModel.swift in Sources */,
 				41F894882A314C2600C9AE02 /* ImagePicker.swift in Sources */,
 				412D00ED2A393CE000544B21 /* Assets.swift in Sources */,
+				B1B069A82A4E34DF001AEEF3 /* Reminder.swift in Sources */,
 				DF36E1C52A239BE900CEE0A9 /* GenderPicker.swift in Sources */,
 				DF36E1C92A239C3600CEE0A9 /* BreedPicker.swift in Sources */,
 				641AEB332A1ED8FC00F2CE34 /* HomeView.swift in Sources */,
 				645458C32A294317008C4B53 /* PetDetailView.swift in Sources */,
 				B109C1C42A422680008585BE /* Pet+CoreDataProperties.swift in Sources */,
 				B10597FF2A37C98E0029CFE3 /* PetDetailViewModel.swift in Sources */,
+				B1B069C42A4E4B59001AEEF3 /* Task+CoreDataClass.swift in Sources */,
 				B10598042A37C9F50029CFE3 /* PetData.swift in Sources */,
 				DF5C023D2A22C86900E9898E /* Constants.swift in Sources */,
 				DF36E1CE2A239F1B00CEE0A9 /* NeuteredPicker.swift in Sources */,
 				A393B5C82A300097006FA0F1 /* CustomTabView.swift in Sources */,
 				4A5F4A1D2A37E31600A8829C /* ConfigView.swift in Sources */,
+				B1B069A62A4E34CE001AEEF3 /* TaskType.swift in Sources */,
 				B1220F932A42DDEB00CFA3C5 /* BirthDatePicker.swift in Sources */,
+				B1B069C52A4E4B59001AEEF3 /* Task+CoreDataProperties.swift in Sources */,
 				DF36E1D42A23A72A00CEE0A9 /* Neutered.swift in Sources */,
 				B109C1C82A42270E008585BE /* CoreDataManager.swift in Sources */,
 				B109C1C32A422680008585BE /* Pet+CoreDataClass.swift in Sources */,
