@@ -14,6 +14,7 @@ struct loveMyPetApp: App {
     @State var selectedTab: TabContextView = .pets
     @StateObject var homeViewModel = HomeViewModel()
     @StateObject var addViewModel = EditPetViewModel()
+    @ObservedObject var taskViewModel = TaskViewModel()
     
     var body: some Scene {
         WindowGroup {
@@ -33,18 +34,18 @@ struct loveMyPetApp: App {
                         addViewModel.newPet = NewPet()
                     }
                 }
-            configView: {
-                ConfigView()
-            } taskView: {
-                TaskView()
-            }
-            .toolbar(selectedTab == .pets ? .visible : .hidden, for: .navigationBar)
-            .navigationTitle(selectedTab == .pets ? TabContextView.pets.rawValue : "")
-            .navigationBarTitleDisplayMode(selectedTab == .pets ? .inline : .large)
-            .preferredColorScheme(Helper.shared.convertToColorScheme(customColorScheme: preferredColor))
+                configView: {
+                    ConfigView()
+                } taskView: {
+                    TaskView()
+                        .environmentObject(taskViewModel)
+                }
+                .toolbar(selectedTab == .pets ? .visible : .hidden, for: .navigationBar)
+                .navigationTitle(selectedTab == .pets ? TabContextView.pets.rawValue : "")
+                .navigationBarTitleDisplayMode(selectedTab == .pets ? .inline : .large)
+                .preferredColorScheme(Helper.shared.convertToColorScheme(customColorScheme: preferredColor))
             }
             .accentColor(Color(CustomColor.MainColor))
-            
         }
     }
 }

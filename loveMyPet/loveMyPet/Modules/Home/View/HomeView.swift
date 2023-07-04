@@ -39,7 +39,7 @@ struct HomeView: View {
         }.onAppear{
             homeViewModel.fetchAllPets()
         }
-        .background(Color(CustomColor.BackGroundColor))
+        .background(Color(CustomColor.BackgroundColor))
     }
 }
 

@@ -64,4 +64,8 @@ enum Constants {
         static let delete = "Excluir"
         static let description = "Uma vez excluida, essa ação não pode ser desfeita."
     }
+    
+    enum Task {
+        static let cardTitle = "Curiosidade do dia!"
+    }
 }

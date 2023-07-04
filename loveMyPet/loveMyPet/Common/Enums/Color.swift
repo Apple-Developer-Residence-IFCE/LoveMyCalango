@@ -8,7 +8,7 @@
 import Foundation
 
 enum CustomColor {
-    static let BackGroundColor = "BackGroundColor"
+    static let BackgroundColor = "BackGroundColor"
     static let BorderCardPet = "BorderCardPet"
     static let FontColor = "FontColor"
     static let PetBackground = "CardPetBackground"

@@ -14,8 +14,10 @@
 		41F894882A314C2600C9AE02 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F894872A314C2600C9AE02 /* ImagePicker.swift */; };
 		41F8948A2A3153FA00C9AE02 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F894892A3153FA00C9AE02 /* Gender.swift */; };
 		41F8948C2A37C43000C9AE02 /* Specie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F8948B2A37C43000C9AE02 /* Specie.swift */; };
+		4A49EB1F2A53744500820481 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A49EB1E2A53744500820481 /* TaskViewModel.swift */; };
 		4A4E8DB82A3A679B00B5586B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E8DB72A3A679B00B5586B /* Helper.swift */; };
 		4A4E8DBB2A3A69B900B5586B /* ConfigViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E8DBA2A3A69B900B5586B /* ConfigViewModel.swift */; };
+		4A525AFA2A4F848A0004972C /* CuriosityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A525AF92A4F848A0004972C /* CuriosityCard.swift */; };
 		4A54C83F2A3134120049CEC0 /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54C83E2A3134120049CEC0 /* ColorScheme.swift */; };
 		4A56853E2A4E2AFB002E5B4B /* Curiosity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A56853D2A4E2AFB002E5B4B /* Curiosity.swift */; };
 		4A5685412A4E3237002E5B4B /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5685402A4E3237002E5B4B /* Fact.swift */; };
@@ -87,8 +89,10 @@
 		41F894872A314C2600C9AE02 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		41F894892A3153FA00C9AE02 /* Gender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 		41F8948B2A37C43000C9AE02 /* Specie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Specie.swift; sourceTree = "<group>"; };
+		4A49EB1E2A53744500820481 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 		4A4E8DB72A3A679B00B5586B /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		4A4E8DBA2A3A69B900B5586B /* ConfigViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigViewModel.swift; sourceTree = "<group>"; };
+		4A525AF92A4F848A0004972C /* CuriosityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuriosityCard.swift; sourceTree = "<group>"; };
 		4A54C83E2A3134120049CEC0 /* ColorScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
 		4A56853D2A4E2AFB002E5B4B /* Curiosity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curiosity.swift; sourceTree = "<group>"; };
 		4A5685402A4E3237002E5B4B /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
@@ -176,6 +180,14 @@
 				641AEB302A1ED8EA00F2CE34 /* HomeModel.swift */,
 			);
 			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		4A49EB1D2A53742C00820481 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4A49EB1E2A53744500820481 /* TaskViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		4A4E8DB62A3A678400B5586B /* Helper */ = {
@@ -364,6 +376,7 @@
 				412D00E82A39216000544B21 /* CustomHomeNavigation.swift */,
 				414D59F12A3D32B90058D0E7 /* CustomEditNavigation.swift */,
 				640189C12A296B0B00813E20 /* AlertMessage.swift */,
+				4A525AF92A4F848A0004972C /* CuriosityCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -447,6 +460,7 @@
 		C02F50052A4CE82E009CB3DF /* Task */ = {
 			isa = PBXGroup;
 			children = (
+				4A49EB1D2A53742C00820481 /* ViewModel */,
 				C02F50082A4CE8D5009CB3DF /* View */,
 			);
 			path = Task;
@@ -701,10 +715,12 @@
 				645458C32A294317008C4B53 /* PetDetailView.swift in Sources */,
 				4A56853E2A4E2AFB002E5B4B /* Curiosity.swift in Sources */,
 				B109C1C42A422680008585BE /* Pet+CoreDataProperties.swift in Sources */,
+				4A525AFA2A4F848A0004972C /* CuriosityCard.swift in Sources */,
 				B10597FF2A37C98E0029CFE3 /* PetDetailViewModel.swift in Sources */,
 				B10598042A37C9F50029CFE3 /* PetData.swift in Sources */,
 				DF5C023D2A22C86900E9898E /* Constants.swift in Sources */,
 				DF36E1CE2A239F1B00CEE0A9 /* NeuteredPicker.swift in Sources */,
+				4A49EB1F2A53744500820481 /* TaskViewModel.swift in Sources */,
 				A393B5C82A300097006FA0F1 /* CustomTabView.swift in Sources */,
 				4A5F4A1D2A37E31600A8829C /* ConfigView.swift in Sources */,
 				B1220F932A42DDEB00CFA3C5 /* BirthDatePicker.swift in Sources */,

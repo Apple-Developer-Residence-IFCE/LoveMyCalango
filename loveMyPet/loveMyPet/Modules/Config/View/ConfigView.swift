@@ -28,7 +28,7 @@ struct ConfigView: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.top, 40)
         .padding(.leading, 24)
-        .background(Color(CustomColor.BackGroundColor))
+        .background(Color(CustomColor.BackgroundColor))
     }
 }
 
