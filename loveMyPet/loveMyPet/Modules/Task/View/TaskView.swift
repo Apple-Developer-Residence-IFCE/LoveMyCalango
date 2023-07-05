@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct TaskView: View {
+    @State var listOfLetterDay : [String] = TaskViewModel().days
+    @State var today : Int = TaskViewModel().today
     var body: some View {
         NavigationView {
             ZStack {
@@ -15,19 +17,8 @@ struct TaskView: View {
                     .ignoresSafeArea()
                 VStack {
                     Text("Tarefa")
-                }
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Image(Assets.Image.namedLogo)
-                        .padding(.horizontal)
-                }
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Image(Assets.Icon.calendar)
-                        .padding(.horizontal)
-                }
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Image(Assets.Icon.add)
+                    InlineCalendar(listOfLetterDay: $listOfLetterDay, selectDay: $today)
+                        .frame(height: 84)
                 }
             }
         }

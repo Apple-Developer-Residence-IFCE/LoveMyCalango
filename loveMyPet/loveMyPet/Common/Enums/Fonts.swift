@@ -26,4 +26,15 @@ enum Font {
     static let SemiBold = "Poppins-SemiBold"
     static let Italic = "Poppins-Italic"
     static let MediumItalic = "Poppins-MediumItalic"
+    enum Inter {
+        static let Black = "Inter-Black"
+        static let ExtraBold = "Inter-ExtraBold"
+        static let Bold = "Inter-Bold"
+        static let SemiBold = "Inter-SemiBold"
+        static let Medium = "Inter-Medium"
+        static let Regular = "Inter-Regular"
+        static let Light = "Inter-Light"
+        static let ExtraLight = "Inter-ExtraLight"
+        static let Thin = "Inter-Thin"
+    }
 }

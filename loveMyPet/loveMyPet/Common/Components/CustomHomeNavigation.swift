@@ -17,18 +17,21 @@ struct CustomHomeNavigation<Home: View, Add: View>: View {
     @State private var showingPopover = false
 
     var body: some View {
-        homeView
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        showingPopover = true
-                    } label: {
-                        Text(Constants.Home.add)
-                            .foregroundColor(Color(CustomColor.MainColor))
-                            .font(.custom(Font.SemiBold, size: 16))
+        NavigationView{
+            homeView
+                .navigationBarTitle(Constants.Home.title, displayMode: .inline)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button {
+                            showingPopover = true
+                        } label: {
+                            Text(Constants.Home.add)
+                                .foregroundColor(Color(CustomColor.MainColor))
+                                .font(.custom(Font.SemiBold, size: 16))
+                        }
                     }
                 }
-            }
+        }
             .sheet(isPresented: $showingPopover, onDismiss: update) {
                 NavigationView {
                     addView
@@ -58,3 +61,4 @@ struct CustomHomeNavigation<Home: View, Add: View>: View {
             }
     }
 }
+

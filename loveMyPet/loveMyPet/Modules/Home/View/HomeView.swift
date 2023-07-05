@@ -11,35 +11,35 @@ struct HomeView: View {
     @StateObject var homeViewModel: HomeViewModel
 
     var body: some View {
-        ScrollView(.vertical) {
-            if homeViewModel.pets.isEmpty {
-                EmptyHome()
-            } else {
-                Grid {
-                    ForEach(homeViewModel.pets, id: \.id) { pet in
-                        VStack {
-                            GridRow {
-                                NavigationLink {
-                                    CustomEditNavigation(detailPet: {
-                                        PetDetailView(pet: pet)
-                                    }, editView: {
-                                        EditPetView(editViewModel: EditPetViewModel(pet: pet))
-                                            .navigationTitle(Constants.Home.editPetTitle)
-                                            .navigationBarTitleDisplayMode(.inline)
-                                    }, update: { homeViewModel.fetchAllPets() })
-                                } label: {
-                                    CardPet(item: pet)
+            ScrollView(.vertical) {
+                if homeViewModel.pets.isEmpty {
+                    EmptyHome()
+                } else {
+                    Grid {
+                        ForEach(homeViewModel.pets, id: \.id) { pet in
+                            VStack {
+                                GridRow {
+                                    NavigationLink {
+                                        CustomEditNavigation(detailPet: {
+                                            PetDetailView(pet: pet)
+                                        }, editView: {
+                                            EditPetView(editViewModel: EditPetViewModel(pet: pet))
+                                                .navigationTitle(Constants.Home.editPetTitle)
+                                                .navigationBarTitleDisplayMode(.inline)
+                                        }, update: { homeViewModel.fetchAllPets() })
+                                    } label: {
+                                        CardPet(item: pet)
+                                    }
                                 }
                             }
                         }
                     }
+                    .padding(.top, 48)
                 }
-                .padding(.top, 48)
+            }.task{
+                homeViewModel.fetchAllPets()
             }
-        }.onAppear {
-            homeViewModel.fetchAllPets()
-        }
-        .background(Color(CustomColor.BackGroundColor))
+            .background(Color(CustomColor.BackGroundColor))
     }
 }
 
